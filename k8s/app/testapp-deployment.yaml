@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-1
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: test-app-1
+  template:
+    metadata:
+      labels:
+        app: test-app-1
+    spec:
+      containers:
+      - name: test-app-1
+        image: arulkumar1967/rev_helloworld_gke_sb
+        env:
+        - name: spring.datasource.url
+          value: "jdbc:mysql://mysql-service.default/admin?allowPublicKeyRetrieval=true&useSSL=false"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8090
