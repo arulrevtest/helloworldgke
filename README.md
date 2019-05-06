@@ -36,6 +36,9 @@ In this section you will start [Google Cloud Shell](https://cloud.google.com/clo
   $ cd helloworldgke
   ```
 
+![](RevGKEDemo.png)
+
+
 ## Create a Kubernetes Cluster
 Use Terraform to create and manage Kubernetes cluster.
 
@@ -129,8 +132,7 @@ Using Helm to install Jenkins from the Charts repository.
     ```shell
     printf $(kubectl get secret cd-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo    ```
 
-2. To get to the Jenkins user interface, click on the Web Preview button ![](img/web-preview.png) in cloud shell, then click “Preview on port 8080”:
-![](img/preview-8080.png)
+2. To get to the Jenkins user interface, click on the Web Preview button in cloud shell, then click “Preview on port 8080”
 
 
 ### Add service account credentials
