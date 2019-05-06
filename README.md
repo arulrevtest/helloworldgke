@@ -127,11 +127,11 @@ Using Helm to install Jenkins from the Charts repository.
 1. The Jenkins chart will automatically create an admin password for you. To retrieve it, run:
 
     ```shell
-    printf $(kubectl get secret cd-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
-    ```
+    printf $(kubectl get secret cd-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo    ```
 
 2. To get to the Jenkins user interface, click on the Web Preview button ![](img/web-preview.png) in cloud shell, then click “Preview on port 8080”:
 ![](img/preview-8080.png)
+
 
 ### Add service account credentials
 
