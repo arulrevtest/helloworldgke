@@ -10,7 +10,7 @@
 
 ## Prerequisites
 1. A Google Cloud Platform Account
-1. [Enable the Compute Engine, Container Engine, and Container Builder APIs](https://console.cloud.google.com/flows/enableapi?apiid=compute_component,container,cloudbuild.googleapis.com)
+1. [Enable the Compute Engine, Container Engine](https://console.cloud.google.com/flows/enableapi?apiid=compute_component,container)
 
 ## Setting up Google Cloud Shell
 In this section you will start [Google Cloud Shell](https://cloud.google.com/cloud-shell/docs/) and clone the lab code repository to it.
