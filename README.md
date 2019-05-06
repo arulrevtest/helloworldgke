@@ -131,7 +131,7 @@ Using Helm to install Jenkins from the Charts repository.
     ```
 
 2. To get to the Jenkins user interface, click on the Web Preview button in cloud shell, then click “Preview on port 8080”:
-![](img/preview-8080.png)
+![](img/web-preview.png)
 
 ### Add service account credentials
 
