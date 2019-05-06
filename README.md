@@ -38,7 +38,7 @@ In this section you will start [Google Cloud Shell](https://cloud.google.com/clo
 
 ## Architecture
 
-![](RevGKEDemo.png)
+![](RevGKEDemo_kubectl.png)
 
 
 ## Create a Kubernetes Cluster
