@@ -145,6 +145,19 @@ Using Helm to install Jenkins from the Charts repository.
 1. From the “Kind” dropdown, select “Google Service Account from metadata”
 1. Click “OK”
 
+## Deploying MySQL database
+
+Deployment of mysql db is done outside pipeline using below commands
+1. kubectl -n dev create secret generic db-credentials --from-literal=mysql-root-password=admin
+1. kubectl -n dev create -f k8s/db/mysql-deployment.yaml
+1. kubectl -n dev create -f k8s/db/mysql-service.yaml
+
+## Zero downtime deployment of helloword application
+
+Jenkins pipeline job is created with this repo as SCM source
+Pipeline steps are defined in Jenkinsfile
+Zero downtime deployment is achieved through RollingUpdate defined in k8s/app/testapp-deployment.yaml
+
 
 ## Testing application
 
