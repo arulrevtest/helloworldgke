@@ -3,6 +3,7 @@
 ## Enhancements in this repository
 
 1. Deploying containers to GKE cluster with kubectl. Please refer to K8s folder and Jenkinsfile for more details
+1. Installing Jenkins with helm chart
 1. Terraform code to create GKE cluster
 1. Testcases are written for Springboot controller
 
