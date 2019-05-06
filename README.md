@@ -130,7 +130,7 @@ Using Helm to install Jenkins from the Charts repository.
     printf $(kubectl get secret cd-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
     ```
 
-2. To get to the Jenkins user interface, click on the Web Preview button in cloud shell, then click “Preview on port 8080”:
+2. To get to the Jenkins user interface, click on the Web Preview button ![](img/web-preview.png) in cloud shell, then click “Preview on port 8080”:
 ![](img/preview-8080.png)
 
 ### Add service account credentials
