@@ -36,6 +36,8 @@ In this section you will start [Google Cloud Shell](https://cloud.google.com/clo
   $ cd helloworldgke
   ```
 
+## Architecture
+
 ![](RevGKEDemo.png)
 
 
