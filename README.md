@@ -155,7 +155,7 @@ Deployment of mysql db is done outside pipeline using below commands
 ## Zero downtime deployment of helloword application
 
 Jenkins pipeline job is created with this repo as SCM source
-Pipeline steps are defined in Jenkinsfile
+Pipeline steps are defined in Jenkinsfile   
 Zero downtime deployment is achieved through RollingUpdate defined in k8s/app/testapp-deployment.yaml
 
 
