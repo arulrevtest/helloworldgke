@@ -48,7 +48,7 @@ volumes: [
                 // Execute the code that is now wrapped with the correct kubectl
                 sh("sed -i.bak 's#arulkumar1967/rev_helloworld_gke_sb#${imageTag}#' ./k8s/app/*.yaml")
                 sh("$KUBECTL apply -f k8s/app")
-                sh("echo http://`KUBECTL get service -o jsonpath='{.status.loadBalancer.ingress[0].ip}'`")
+                sh("echo http://`$KUBECTL get service -o jsonpath='{.status.loadBalancer.ingress[0].ip}'`")
             }
          }
 
