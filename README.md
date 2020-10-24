@@ -156,9 +156,14 @@ Using Helm to install Jenkins from the Charts repository.
    service account. On the ID field, type a human-readable name and press ok.   
 1. https://www.jenkins.io/blog/2018/09/14/kubernetes-and-secret-agents/   
 1. Jenkins URL: http://cd-jenkins:8080
-1. Jenkins tunnel: cd-jenkins-agent:50000 - This is the port that is used to communicate with an agent
+1. Jenkins tunnel: cd-jenkins-agent:50000 - This is the port that is used to communicate with an agent   
+1.  Install Docker Pipeline plugin      
+```   
+docker.withRegistry('', 'aruldoccred') {
+            sh "docker push ${imageTag}"
+        }
 
-
+```    
 
 ## Deploying MySQL database
 

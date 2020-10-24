@@ -39,7 +39,7 @@ volumes: [
     }
     stage('Deploy') {
         container('kubectl') {
-          withCredentials([string(credentialsId: 'arulkubeconfig', variable: 'K8S_TOKEN')]) {
+          withCredentials([string(credentialsId: 'gke-jenkins-sa-token', variable: 'K8S_TOKEN')]) {
             withEnv([
                 // Ensure that kubectl is using our special robot deployer’s kubeconfig
                 "KUBECONFIG=/home/[jenkins_user]/.kube/kubernetes_deployment_config",
