@@ -145,6 +145,21 @@ Using Helm to install Jenkins from the Charts repository.
 1. From the “Kind” dropdown, select “Google Service Account from metadata”
 1. Click “OK”
 
+### Configuring Kubernetes pod templates   
+1. https://medium.com/@chathurams.sa/configure-jenkins-with-kubernetes-e3175e02ca8   
+1. kubectl create serviceaccount jenkins   
+1. kubectl get secret    
+1. kubectl describe secrets jenkins-token-z259g   
+1. copy the secret token and login to your Jenkins master server. 
+1. From the navigation bar on the left-hand corner, navigate to Credentials -> Systems and click on “Add Credentials”. 
+1. From the drop-down menu, select “Secret Text” as the kind. On the secret text field past the token, you copped from the Kubernetes
+   service account. On the ID field, type a human-readable name and press ok.   
+1. https://www.jenkins.io/blog/2018/09/14/kubernetes-and-secret-agents/   
+1. Jenkins URL: http://cd-jenkins:8080
+1. Jenkins tunnel: cd-jenkins-agent:50000 - This is the port that is used to communicate with an agent
+
+
+
 ## Deploying MySQL database
 
 Deployment of mysql db is done outside pipeline using below commands

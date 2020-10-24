@@ -32,14 +32,14 @@ volumes: [
     stage('Build and push image with Container Builder') {
         container('docker') {
           sh "docker build -t ${imageTag} ."
-          withDockerRegistry([ credentialsId: "2d3a7c2b-58a2-4740-9195-e9082d59468b", url: "" ]) {
+          withDockerRegistry([ credentialsId: "aruldoccred", url: "" ]) {
             sh "docker push ${imageTag}"
         }
       }
     }
     stage('Deploy') {
         container('kubectl') {
-          withCredentials([string(credentialsId: '16469a0d-1ac3-4404-9f66-f81893abe4cf', variable: 'K8S_TOKEN')]) {
+          withCredentials([string(credentialsId: 'arulkubeconfig', variable: 'K8S_TOKEN')]) {
             withEnv([
                 // Ensure that kubectl is using our special robot deployer’s kubeconfig
                 "KUBECONFIG=/home/[jenkins_user]/.kube/kubernetes_deployment_config",
