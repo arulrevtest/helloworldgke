@@ -229,3 +229,7 @@ curl -X PUT \
 }'
 Expected result:
 Date 2019-04-30 must be a date before the today date
+
+### 24122020   
+
+check-apis
