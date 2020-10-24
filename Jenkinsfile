@@ -32,7 +32,7 @@ volumes: [
     stage('Build and push image with Container Builder') {
         container('docker') {
           sh "docker build -t ${imageTag} ."
-          withDockerRegistry([ credentialsId: "aruldoccred", url: "" ]) {
+          withDockerRegistry(registry: [credentialsId: 'aruldoccred']) {
             sh "docker push ${imageTag}"
         }
       }
